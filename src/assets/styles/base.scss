@@ -1,0 +1,14 @@
+// @import '../node_modules/modern-normalize/modern-normalize.css';
+// @import '../node_modules/semantic-ui-css/semantic.min.css';
+@import './helpers';
+
+html * {
+	// font-family: 'Nunito', sans-serif;
+	font-family: Roboto, Arial, sans-serif;
+}
+
+html, body {
+	margin: 0;
+	background-color: #1e1e1e;
+	color: #cccccc;
+}
