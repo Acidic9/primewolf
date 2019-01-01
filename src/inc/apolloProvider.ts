@@ -6,5 +6,5 @@ import ApolloClient from 'apollo-client'
 Vue.use(VueApollo)
 
 export default (apolloClient: ApolloClient<any>): VueApollo => new VueApollo({
-  defaultClient: apolloClient,
+	defaultClient: apolloClient,
 })

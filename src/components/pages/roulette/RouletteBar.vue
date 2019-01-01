@@ -8,7 +8,7 @@
 				<div class="label">Previous rolls</div>
 				<div class="previous-rolls__coins">
 					<!-- <transition-group name="fade" tag="div" > -->
-							<img v-for="(roll, index) in previousRolls" :src="getRollImage(roll)" :key="index" />
+							<img v-for="(roll, index) in previousRolls" :src="getRollImage(roll)" :key="index" @click="slideToCoin(roll)" />
 					<!-- </transition-group> -->
 				</div>
 			</BaseFlexContainer>
