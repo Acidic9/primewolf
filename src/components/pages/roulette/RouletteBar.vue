@@ -25,7 +25,24 @@ import randomFloatBetween from '@/utils/randomFloatBetween'
 import roundToClosestMultiple from '@/utils/roundToClosestMultiple'
 import { CoinType } from '@/types/coins'
 
-@Component
+import gql from 'graphql-tag'
+import rouletteSpin from '@/graphql/rouletteSpin.gql'
+
+@Component({
+	apollo: {
+		// Subscriptions
+		$subscribe: {
+			// When a tag is added
+			tagAdded: {
+				query: rouletteSpin,
+				// Result hook
+				result(data) {
+					console.log(data.data.rouletteSpin)
+				},
+			},
+		},
+	},
+})
 export default class RouletteBar extends Vue {
 	// Data
 	previousRolls: number[] = [0, 1, 1, 0, 2, 0, 1, 0, 1, 1]
